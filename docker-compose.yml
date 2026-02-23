@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  video-gennie:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: video-gennie
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./output:/app/output
+      - ./cache:/app/cache
+      - ./storage:/app/storage
+      - ./logs:/app/logs
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      # Add your API keys and other environment variables below
+      # - OPENAI_API_KEY=your_openai_api_key
+      # - OPENAI_ORGANIZATION=your_openai_org_id
+      # - AWS_ACCESS_KEY_ID=your_aws_access_key
+      # - AWS_SECRET_ACCESS_KEY=your_aws_secret_key
+      # - AWS_REGION=us-east-1
+      # - PEXELS_API_KEY=your_pexels_api_key
+      # - GOOGLE_API_KEY=your_google_api_key
+      # - GOOGLE_SEARCH_ENGINE_ID=your_google_search_engine_id
+      # - USE_GOOGLE_SEARCH=false
+      # - JAMENDO_CLIENT_ID=your_jamendo_client_id
+    # If you want to use a .env file instead of environment variables in docker-compose
+    env_file:
+      - .env 

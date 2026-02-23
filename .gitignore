@@ -1,0 +1,15 @@
+# OpenMemory - IDE/Assistant specific rules
+.cursor/rules/openmemory.mdc
+
+# Env and secrets (never commit)
+.env
+.env.*
+!.env.example
+
+# Build and runtime
+dist/
+node_modules/
+logs/
+cache/
+audio/
+*.log

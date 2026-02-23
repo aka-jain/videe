@@ -1,0 +1,63 @@
+{
+  "name": "video-gennie",
+  "version": "1.0.0",
+  "description": "A service that generates videos from text prompts",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "dev:watch": "nodemon --exec ts-node src/index.ts",
+    "js": "node index.js",
+    "analyze-search-failures": "ts-node src/scripts/analyzeSearchFailures.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "video",
+    "generation",
+    "AI",
+    "OpenAI",
+    "AWS",
+    "Polly"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "18": "^0.0.0",
+    "@aws-sdk/client-s3": "^3.787.0",
+    "@aws-sdk/s3-request-presigner": "^3.787.0",
+    "@google-cloud/text-to-speech": "^5.5.0",
+    "@propelauth/node": "^2.1.33",
+    "@tailwindcss/postcss": "^4.1.10",
+    "@types/cors": "^2.8.18",
+    "aws-sdk": "^2.1550.0",
+    "axios": "^1.6.7",
+    "chalk": "^5.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "google-auth-library": "^9.15.1",
+    "googleapis": "^148.0.0",
+    "lucide-react": "^0.522.0",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.103.0",
+    "postcss": "^8.5.6",
+    "streaming": "^1.1.1",
+    "tailwindcss": "^4.1.10",
+    "tmp": "^0.2.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.4",
+    "@types/express": "^4.17.21",
+    "@types/fluent-ffmpeg": "^2.1.24",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^20.11.16",
+    "@types/tmp": "^0.2.6",
+    "@types/uuid": "^9.0.8",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
